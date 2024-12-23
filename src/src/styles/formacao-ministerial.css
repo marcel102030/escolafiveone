@@ -1,0 +1,134 @@
+/* Estilos básicos */
+html, body {
+    height: 100%;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #0A0E27; /* Fundo escuro */
+    color: #fff; /* Texto claro */
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    width: 100%;
+    max-width: 800px;
+    padding: 0 15px;
+    min-height: 100vh;
+    margin: 0 auto;
+}
+
+/* Cabeçalhos */
+h1, h2 {
+    color: #FFFFFF;
+}
+
+p {
+    font-size: 1.2rem;
+    margin-bottom: 1.5rem;
+    color: #DDD;
+}
+
+/* Botões */
+button {
+    background-color: #007BFF;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1rem;
+    margin-top: 20px;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+/* Relatório de resultados */
+#relatorio-resultado {
+    width: 100%;
+    margin-top: 20px;
+}
+
+.relatorio-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+    width: 100%;
+}
+
+.relatorio-nome {
+    width: 20%;
+    font-size: 1rem;
+    font-weight: bold;
+    color: #fff;
+    text-align: right;
+    margin-right: 10px;
+}
+
+.relatorio-barra {
+    width: 60%;
+    height: 20px;
+    background-color: #ccc;
+    border-radius: 10px;
+    overflow: hidden;
+    position: relative;
+}
+
+.relatorio-barra-preenchida {
+    height: 100%;
+    background-color: #28AFB0;
+    border-radius: 10px;
+    transition: width 0.5s ease;
+}
+
+.relatorio-valor {
+    width: 20%;
+    font-size: 1rem;
+    font-weight: bold;
+    color: #28AFB0;
+    text-align: left;
+    margin-left: 10px;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .relatorio-item {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .relatorio-nome {
+        text-align: left;
+        margin-right: 0;
+    }
+
+    .relatorio-valor {
+        margin-left: 0;
+        margin-top: 5px;
+    }
+
+    .relatorio-barra {
+        width: 100%;
+    }
+}
+
+/* Destaque do Dom Principal */
+#relatorio-resultado h3 {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #28AFB0;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+#relatorio-resultado p {
+    font-size: 1.2rem;
+    color: #ddd;
+    margin-bottom: 20px;
+    text-align: center;
+}

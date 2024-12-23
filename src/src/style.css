@@ -1,0 +1,724 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #0a0f30;
+    color: #FFFFFF;
+}
+
+/* Menu de Navegação Ajustado */
+
+/* Estilos para a logo no menu */
+header nav .logo {
+    margin-right: 1em;
+    display: inline-flex;
+    align-items: center;
+}
+
+header nav .logo img {
+    height: 100px; /* Aumente para um tamanho apropriado */
+    width: auto;  /* Para manter a proporção */
+    vertical-align: middle;
+}
+
+
+header nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #0a0f30;
+    /* Fundo azul escuro */
+    color: #fff;
+    padding: 1.5em;
+    /* Aumenta o espaçamento ao redor */
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    text-align: center;
+    font-size: 1.1em;
+    /* Aumenta o tamanho da fonte */
+    letter-spacing: 1px;
+    /* Aumenta o espaçamento entre letras */
+}
+
+header nav a {
+    color: #CCCCCC;
+    /* Cinza claro para links */
+    margin: 0 1.5em;
+    /* Aumenta o espaçamento entre os links */
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+header nav a:hover {
+    color: #3b82f6;
+    /* Azul claro para efeito hover */
+    transform: scale(1.1);
+    /* Aumenta levemente o tamanho ao passar o mouse */
+}
+
+
+/* Estilos da seção hero */
+.hero {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(rgba(10, 15, 48, 0.8), rgba(10, 15, 48, 0.8)), 
+                url('../images/Logo\ \(Banner\ YouTube\ -\ fundo\ preto\).png') no-repeat center top;
+    /* Alterado para 'center top' para posicionar a imagem mais acima */
+    background-size: cover;
+    color: #fff;
+    text-align: center;
+    padding: 100px 20px;
+}
+
+
+.hero-title,
+.hero-subtitle {
+    opacity: 1;
+    /* Garantir visibilidade total */
+    transition: none;
+    /* Remover transições */
+}
+
+.hero h1 {
+    font-size: 3em;
+    color: #CCCCCC;
+    margin-bottom: 0.5em;
+}
+
+.hero p {
+    font-size: 1.5em;
+    margin-bottom: 1em;
+}
+
+.hero button {
+    margin-top: 20px;
+    background-color: #3b82f6;
+    color: #fff;
+    padding: 0.75em 1.5em;
+    border: none;
+    border-radius: 5px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+
+
+.hero button:hover {
+    background-color: #4a90e2;
+}
+
+/* Responsividade para dispositivos móveis */
+@media (max-width: 768px) {
+    .hero {
+        min-height: 400px;
+    }
+
+    .hero h1 {
+        font-size: 2em;
+    }
+
+    .hero p {
+        font-size: 1.2em;
+    }
+
+    header nav a {
+        margin: 0 0.5em;
+        font-size: 0.9em;
+    }
+
+    .hero button {
+        padding: 0.5em 1em;
+        font-size: 0.9em;
+    }
+}
+
+/* Efeito de fade-in para seções */
+.fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Seção de Sobre Nós */
+#sobre {
+    padding: 4em 2em;
+    margin-top: 2em;
+    background: linear-gradient(135deg, #0a0f30 0%, #1a1f50 100%);
+    color: #FFFFFF;
+    text-align: center;
+}
+
+#sobre h2 {
+    font-size: 2em;
+    margin-bottom: 0.5em;
+}
+
+#sobre p {
+    font-size: 1.1em;
+    max-width: 1000px;
+    margin: 0 auto;
+    color: #CCCCCC;
+    line-height: 1.6;
+}
+
+/* Seção de Serviços */
+.services {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    padding: 1em 0;
+    background-color: #0a0f30;
+    color: #FFFFFF;
+    margin-bottom: 2em;
+}
+
+.service-item {
+    text-align: center;
+    max-width: 150px;
+    margin: 1em;
+    flex: 1 1 150px;
+}
+
+.service-item img {
+    width: auto;
+    height: 700px;
+    max-width: 200px;
+    object-fit: contain;
+    margin-bottom: -8em;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+}
+
+.service-item img:hover {
+    transform: scale(1.1);
+}
+
+.service-item h3 {
+    font-size: 1.2em;
+    color: #CCCCCC;
+    margin-bottom: 0.5em;
+}
+
+.service-item p {
+    font-size: 0.9em;
+    color: #AAAAAA;
+}
+
+/* Carrossel de Conteúdo */
+.carousel {
+    padding: 2em 0;
+    text-align: center;
+    background-color: #0a0f30;
+}
+
+.carousel h2 {
+    color: #CCCCCC;
+    margin-bottom: 1em;
+    font-size: 1.8em;
+}
+
+.carousel-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow-x: auto;
+    gap: 1em;
+    padding: 1em;
+    scroll-snap-type: x mandatory;
+}
+
+.carousel-items {
+    display: flex;
+    gap: 1em;
+}
+
+.carousel-item {
+    min-width: 250px;
+    background-color: #989bb7;
+    /* Fundo azul escuro */
+    color: #fff;
+    padding: 1.5em;
+    border-radius: 8px;
+    text-align: center;
+    scroll-snap-align: start;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    /* Suavidade na escala e sombra */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+    /* Sombra inicial */
+}
+
+.carousel-item:hover {
+    transform: scale(1.05);
+    /* Aumenta levemente ao passar o mouse */
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.3);
+    /* Sombra mais intensa ao passar o mouse */
+}
+
+.carousel-item h3 {
+    font-size: 1.4em;
+    color: #ffffff;
+    margin-bottom: 0.5em;
+}
+
+.carousel-item p {
+    font-size: 1em;
+    color: #cccccc;
+    margin-bottom: 1em;
+}
+
+.carousel-item .btn-link {
+    display: inline-block;
+    padding: 0.5em 1em;
+    background-color: #ffffff;
+    color: #1a1f50;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.carousel-item .btn-link:hover {
+    background-color: #ffffff;
+    /* Mantém a cor de fundo branca */
+    color: #1a1f50;
+    /* Mantém a cor do texto */
+}
+
+/* Ajustes para os botões de navegação do carrossel */
+.carousel-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    border: none;
+    padding: 0.5em 1em;
+    cursor: pointer;
+    font-size: 1.5em;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.carousel-btn:hover {
+    background-color: rgba(255, 255, 255, 0.5);
+    /* Cor mais clara ao passar o mouse */
+}
+
+.left-btn {
+    left: 10px;
+}
+
+.right-btn {
+    right: 10px;
+}
+
+
+
+.carousel-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    border: none;
+    padding: 0.5em 1em;
+    cursor: pointer;
+    font-size: 1.5em;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.carousel-btn:hover {
+    background-color: rgba(255, 255, 255, 0.5);
+}
+
+.left-btn {
+    left: 10px;
+}
+
+.right-btn {
+    right: 10px;
+}
+
+
+/* Botões de navegação do carrossel */
+.carousel-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    border: none;
+    padding: 0.5em 1em;
+    cursor: pointer;
+    font-size: 1.5em;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.carousel-btn:hover {
+    background-color: rgba(255, 255, 255, 0.5);
+}
+
+.left-btn {
+    left: 10px;
+}
+
+.right-btn {
+    right: 10px;
+}
+
+.contact {
+    padding: 2em;
+    background-color: #1a1f50;
+    color: #FFFFFF;
+    text-align: center;
+}
+
+.contact h2 {
+    font-size: 2em;
+    margin-bottom: 0.5em;
+}
+
+.contact p {
+    font-size: 1.1em;
+    color: #CCCCCC;
+    margin-bottom: 1em;
+}
+
+.contact form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.contact input,
+.contact textarea {
+    width: 80%;
+    max-width: 500px;
+    padding: 0.75em;
+    margin-bottom: 1em;
+    border: none;
+    border-radius: 5px;
+}
+
+.contact button {
+    padding: 0.75em 1.5em;
+    background-color: #3b82f6;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.contact button:hover {
+    background-color: #4a90e2;
+}
+
+/* Responsividade para a seção de serviços */
+@media (max-width: 768px) {
+    .services {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .carousel-items {
+        max-width: 100%;
+    }
+
+    .contact input,
+    .contact textarea {
+        width: 90%;
+    }
+}
+
+footer {
+    background-color: #0a0f30;
+    padding: 1em 0;
+    text-align: center;
+    color: #CCCCCC;
+}
+
+.footer-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.social-links a {
+    color: #3b82f6;
+    margin: 0 0.5em;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.social-links a:hover {
+    color: #4a90e2;
+}
+
+/* Estilos para todos os botões */
+button,
+.btn {
+    background-color: #3b82f6;
+    color: #fff;
+    padding: 0.75em 1.5em;
+    border: none;
+    border-radius: 5px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+button:hover,
+.btn:hover {
+    background-color: #4a90e2;
+    transform: translateY(-2px);
+}
+
+button:active,
+.btn:active {
+    transform: translateY(0);
+}
+
+/* Estilos para links */
+a {
+    color: #3b82f6;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: #4a90e2;
+}
+
+/* Loader de Carregamento */
+#loader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #0a0f30;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 2000;
+}
+
+.spinner {
+    width: 50px;
+    height: 50px;
+    border: 5px solid #3b82f6;
+    border-top-color: #ffffff;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@media (max-width: 600px) {
+    .hero h1 {
+        font-size: 1.8em;
+    }
+
+    .hero p {
+        font-size: 1em;
+    }
+
+    header nav a {
+        font-size: 0.85em;
+        margin: 0 0.3em;
+    }
+
+    .services {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .service-item {
+        max-width: 90%;
+    }
+
+    .carousel-container {
+        flex-direction: column;
+        gap: 1em;
+    }
+
+    .carousel-item {
+        min-width: 90%;
+    }
+
+    .contact input,
+    .contact textarea {
+        width: 95%;
+    }
+}
+
+/* Estilo para o link em forma de botão */
+.button-link {
+    display: inline-block;
+    background-color: #c5bfbffc;
+    /* Cor de fundo branco */
+    color: #0a0f30;
+    /* Cor do texto */
+    padding: 0.5em 1em;
+    border-radius: 5px;
+    font-weight: bold;
+    text-decoration: none;
+    transition: color 0.3s ease, background-color 0.3s ease;
+    /* Suaviza a transição */
+    pointer-events: auto;
+    color: #0e4caf;
+    /* Azul para o efeito de hover */
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.button-link:hover {
+    background-color: #ffffff;
+    /* Mantém a cor de fundo branca */
+    color: #12469a;
+    /* Azul claro para hover */
+}
+
+#back-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #3b82f6;
+    color: #ffffff;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.5em;
+    display: none;
+    /* Ele só aparecerá quando a classe 'show' for adicionada */
+    z-index: 1000;
+    /* Garante que ele fique acima de outros elementos */
+    transition: opacity 0.3s ease;
+}
+
+#back-to-top.show {
+    display: block;
+}
+/* Estilo para a busca e cabeçalho do blog */
+.blog-header {
+    text-align: center;
+    margin: 2em 0;
+}
+
+.blog-search {
+    width: 80%;
+    max-width: 600px;
+    padding: 10px;
+    margin-top: 1em;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+/* Layout para o conteúdo do blog */
+.blog-content {
+    display: flex;
+    justify-content: space-around;
+    padding: 2em;
+}
+
+.blog-categories {
+    flex: 1;
+    max-width: 200px;
+}
+
+.blog-categories ul {
+    list-style: none;
+    padding: 0;
+}
+
+.blog-categories ul li a {
+    text-decoration: none;
+    color: #3b82f6;
+    display: block;
+    margin: 0.5em 0;
+}
+
+.blog-posts {
+    flex: 3;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1em;
+}
+
+/* Estilo para os cards de postagens */
+.blog-card {
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+.blog-card img {
+    width: 100%;
+    height: auto;
+}
+
+.blog-card-content {
+    padding: 1em;
+}
+
+.category-tag {
+    background-color: #ffce00;
+    color: #333;
+    padding: 0.3em 0.7em;
+    border-radius: 5px;
+    font-size: 0.8em;
+    margin-bottom: 0.5em;
+    display: inline-block;
+}
+
+.blog-card h3 {
+    font-size: 1.2em;
+    margin: 0.5em 0;
+}
+
+.blog-card p {
+    font-size: 0.9em;
+    color: #555;
+}
+
+.read-more {
+    color: #ff5733;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.blog-card footer {
+    font-size: 0.8em;
+    color: #999;
+    padding: 0.5em 1em;
+}

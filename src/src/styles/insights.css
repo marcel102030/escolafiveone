@@ -1,0 +1,157 @@
+/* Estilização do cabeçalho do blog */
+.blog-header {
+    text-align: center;
+    padding: 130px 20px;
+    background-color: #0a0f30;
+    color: #28AFB0;
+}
+
+.blog-header h1 {
+    margin-bottom: 10px;
+    font-size: 3.5em;
+}
+
+/* Estilização dos cartões de post */
+.blog-posts {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 20px;
+    gap: 20px;
+}
+
+.post-card {
+    background-color: #1b1b3a;
+    border-radius: 8px;
+    overflow: hidden;
+    width: calc(33.33% - 40px);
+    /* Três colunas */
+    color: #fff;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s;
+}
+
+.post-card:hover {
+    transform: translateY(-5px);
+}
+
+.post-card img {
+    width: 100%;
+    height: auto;
+}
+
+.post-card h2 {
+    margin: 15px;
+    font-size: 1.5em;
+}
+
+.post-card p {
+    margin: 15px;
+    line-height: 1.6;
+}
+
+.post-card a {
+    color: #f1c40f;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* Estilização do rodapé */
+footer {
+    text-align: center;
+    background-color: #1a1a2e;
+    color: #fff;
+    padding: 20px 0;
+}
+
+.social-links a {
+    color: #CCCCCC;
+    margin: 0 10px;
+    transition: color 0.3s ease;
+}
+
+.social-links a:hover {
+    color: #28AFB0;
+}
+
+/* Ajustes de layout responsivo */
+@media (max-width: 768px) {
+    .post-card {
+        width: calc(50% - 20px);
+    }
+}
+
+@media (max-width: 480px) {
+    .post-card {
+        width: 100%;
+    }
+
+    .blog-header h1 {
+        font-size: 2.5em;
+    }
+}
+
+/* Estilo para o título principal */
+.post-detalhado h1 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+    color: #d3b414;
+}
+
+/* Estilo para parágrafos */
+.post-detalhado p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: #988e8e;
+    margin-bottom: 1.5rem;
+}
+
+/* Estilo para citações */
+.post-detalhado blockquote {
+    font-style: italic;
+    background: #f9f9f9;
+    border-left: 5px solid #ccc;
+    margin: 1.5rem 0;
+    padding: 1rem;
+    color: #555;
+}
+
+/* Estilo para imagens */
+.post-detalhado img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    margin: 2rem auto;
+}
+
+/* Estilo para subtítulos */
+.post-detalhado h2,
+.post-detalhado h3 {
+    font-size: 1.8rem;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    color: #222;
+}
+
+/* Estilo para listas */
+.post-detalhado ul,
+.post-detalhado ol {
+    margin: 1rem 0 1rem 2rem;
+    line-height: 1.6;
+}
+
+/* Ajustes de espaçamento */
+.post-detalhado {
+    padding: 2rem;
+}
+
+/* Estilo para citações maiores */
+.post-detalhado .highlight-quote {
+    font-size: 1.4rem;
+    font-weight: bold;
+    background: #bbbbb4;
+    padding: 1rem;
+    margin: 2rem 0;
+    border-left: 6px solid #d3b414;
+}

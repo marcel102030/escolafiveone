@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teste dos 5 Dons Ministeriais</title>
+    <link rel="stylesheet" href="../src/styles/teste-dons.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="../src/styles/style.css">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <a href="index.html" class="logo">
+                <img src="../src/images/Five One LOGO 200X200 BRANCA-07.png" alt="Five One" />
+            </a>
+            <a href="quem-somos.html">QUEM SOMOS</a>
+            <a href="teste-dons.html">DESCUBRA O SEU DOM MINISTERIAL</a>
+            <a href="formacao-ministerial.html" id="link-formacao-ministerial ">FORMAÇÃO MINISTERIAL</a>
+            <a href="insights.html">INSIGHTS MINISTERIAIS</a>
+            <a href="#contato">CONTATO</a>
+            <a href="https://alunos.escolafiveone.com/login" class="button-link" target="_blank">ALUNOS FIVE ONE</a>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Seção inicial -->
+        <section id="inicio">
+            <h1>Bem-vindo ao Teste dos 5 Dons Ministeriais</h1>
+            <p>Descubra seu dom ministerial respondendo algumas perguntas rápidas!</p>
+            <button id="iniciarTeste">Iniciar Teste</button>
+        </section>
+
+        <!-- Seção de perguntas -->
+        <section id="perguntas" style="display: none;">
+            <h2 id="titulo-pergunta">Pergunta</h2>
+            <div class="botoes">
+                <button class="opcao" data-resposta=""></button>
+                <button class="opcao" data-resposta=""></button>
+            </div>
+        </section>
+
+        <!-- Seção de resultado -->
+        <section id="resultado" style="display: none;">
+            <h2>Parabéns, seu resultado está pronto!</h2>
+            <p>Leia com atenção as informações abaixo para tirar o máximo de proveito do seu teste. Nele você vai ver qual dos 5 dons você tem uma maior inclinação e como isso se aplica à sua vida.</p>
+            
+            <!-- Relatório de resultados -->
+            <div id="relatorio-resultado">
+                <!-- Relatório será preenchido dinamicamente pelo JavaScript -->
+            </div>
+
+            <button id="reiniciarTeste">Reiniciar Teste</button>
+        </section>
+    </main>
+
+    <script src="../src/scripts/teste-dons.js"></script>
+</body>
+
+</html>

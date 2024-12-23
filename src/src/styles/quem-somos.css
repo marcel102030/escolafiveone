@@ -1,0 +1,429 @@
+/* Exemplo de estilo para a seção quem-somos */
+#quem-somos-content {
+    padding: 50px 20px;
+    background-color: #0a0f30;
+    color: #ffffff;
+}
+
+/* Estilo geral */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #0a0f30;
+    color: #FFFFFF;
+    margin: 0;
+    padding: 0;
+}
+
+/* Estilo do menu de navegação */
+header nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #0a0f30;
+    padding: 1em;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+header nav a {
+    color: #CCCCCC;
+    margin: 0 1em;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+header nav a:hover {
+    color: #3b82f6;
+}
+
+.button-link {
+    background-color: #28AFB0;
+    color: #040404;
+    padding: 10px 15px;
+    border-radius: 5px;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.button-link:hover {
+    background-color: #4a90e2;
+    color: #ffffff;
+}
+
+/* Estilo da seção principal */
+main {
+    padding: 80px 20px 20px 20px;
+}
+
+nav a.ativo {
+    color: #28AFB0;
+    /* Cor de destaque para o link ativo, você pode ajustar conforme desejado */
+    font-weight: bold;
+    text-decoration: underline;
+    Opcional: sublinha o link ativo
+}
+
+#quem-somos {
+    padding: 50px;
+    background-color: #0a0f30;
+    color: #bd2828;
+    text-align: center;
+}
+
+
+/* Rodapé */
+footer {
+    background-color: #0a0f30;
+    color: #CCCCCC;
+    text-align: center;
+    padding: 1em 0;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    header nav a {
+        margin: 0 0.5em;
+        font-size: 0.9em;
+    }
+
+    .button-link {
+        font-size: 0.9em;
+        padding: 8px 12px;
+    }
+}
+
+.info-section {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    padding: 3em 0;
+    background-color: #0a0f30;
+    /* Ajuste a cor conforme o design */
+    color: #fff;
+}
+
+.info-block {
+    text-align: center;
+    max-width: 300px;
+    padding: 1em;
+}
+
+.info-block img {
+    width: 60px;
+    height: auto;
+    margin-bottom: 1em;
+}
+
+.info-block h3 {
+    font-size: 1.5em;
+    color: #28AFB0;
+    /* Amarelo ouro para o título */
+    margin-bottom: 0.5em;
+}
+
+.info-block p {
+    font-size: 1em;
+    color: #cccccc;
+    /* Cinza claro para o texto */
+    line-height: 1.6;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .info-section {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .info-block {
+        max-width: 100%;
+        margin-bottom: 1.5em;
+    }
+}
+
+/* Estilo caixinha */
+
+.info-section {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    padding: 8em 0;
+    background-color: #0a0f30;
+    /* Ajuste a cor conforme o design */
+    gap: 1em;
+}
+
+.info-box {
+    background-color: #1a1f50;
+    color: #fff;
+    text-align: center;
+    padding: 2em 1em;
+    border-radius: 15px;
+    max-width: 300px;
+    position: relative;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.info-box img {
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    top: -25px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: transparent;
+    /* Defina como transparente para remover o fundo branco */
+    border-radius: 50%;
+    padding: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+
+.info-box h3 {
+    font-size: 1.5em;
+    color: #28AFB0;
+    /* Amarelo ouro para o título */
+    margin-top: 40px;
+    margin-bottom: 0.5em;
+}
+
+.info-box p {
+    font-size: 1em;
+    color: #cccccc;
+    /* Cinza claro para o texto */
+    line-height: 1.6;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .info-section {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .info-box {
+        max-width: 90%;
+        margin-bottom: 1.5em;
+    }
+}
+
+.icon-container {
+    width: 60px;
+    /* Defina o tamanho desejado do contêiner */
+    height: 60px;
+    position: relative;
+    background-color: #f1f1f1;
+    /* Exemplo de cor de fundo, se desejar */
+    border-radius: 50%;
+    /* Torna o contêiner circular */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.icon-container img {
+    width: 100%;
+    /* Ajusta a imagem para se adaptar ao contêiner */
+    height: auto;
+    max-width: 80%;
+    /* Limita o tamanho da imagem para ficar dentro do contêiner */
+}
+
+/* Estilo para a seção de valores */
+.values-section {
+    padding: 2em 1em;
+    background-color: #ffffff;
+    /* Cor de fundo */
+}
+
+.section-title {
+    font-size: 2em;
+    text-align: center;
+    margin-bottom: 0.2em;
+    color: #192653;
+}
+
+.section-subtitle {
+    font-size: 1.2em;
+    text-align: center;
+    margin-bottom: 1em;
+    color: #666666;
+    font-style: italic;
+}
+
+.values-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    max-width: 800px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.values-list li {
+    position: relative;
+    padding-left: 2.5em;
+    margin-bottom: 2em;
+    color: #333333;
+}
+
+.values-list li::before {
+    content: "";
+    position: absolute;
+    left: 1.2em;
+    top: 0;
+    bottom: 0;
+    width: 1px;
+    background-color: #DAA520;
+    /* Cor da linha vertical */
+}
+
+.values-list li::after {
+    content: "●";
+    position: absolute;
+    left: 0.6em;
+    top: 0.2em;
+    font-size: 1em;
+    color: #DAA520;
+    /* Cor do ponto de destaque */
+}
+
+.value-title {
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #192653;
+}
+
+.values-list p {
+    font-size: 1em;
+    color: #555555;
+    margin-top: 0.5em;
+    line-height: 1.6;
+}
+
+/* Estilo para a seção de diretores */
+.directors-section {
+    padding: 3em 1em;
+    background-color: #102151; /* Fundo azul escuro */
+    text-align: center;
+}
+
+.directors-section .section-title {
+    color: #ffffff;
+    font-size: 2em;
+    margin-bottom: 1em;
+}
+
+.directors-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 1.5em;
+}
+
+.director-card {
+    background-color: #ffffff;
+    border-radius: 10px;
+    padding: 1.5em;
+    width: 100%;
+    max-width: 300px;
+    text-align: center;
+}
+
+.director-card img {
+    width: 100%;
+    border-radius: 5px;
+    margin-bottom: 0.5em;
+}
+
+.director-card h3 {
+    color: #DAA520;
+    font-size: 1.3em;
+    margin-bottom: 0.2em;
+}
+
+.director-title {
+    color: #192653;
+    font-weight: bold;
+    margin-bottom: 0.8em;
+    font-size: 1em;
+}
+
+.director-description {
+    color: #333333;
+    font-size: 0.95em;
+    line-height: 1.5;
+}
+
+/* Estilos para a seção da Escola Five one */
+.movement-section {
+    padding: 3em 1em;
+    background-color: #102151;
+    color: #ffffff;
+    text-align: center;
+}
+
+.movement-title {
+    font-size: 2em;
+    color: #28AFB0; /* Cor dourada */
+    margin-bottom: 1em;
+}
+
+.movement-content p {
+    font-size: 1em;
+    line-height: 1.6;
+    margin-bottom: 1em;
+}
+
+.movement-images {
+    display: flex;
+    justify-content: center;
+    gap: 1em;
+    margin-top: 1.5em;
+}
+
+.movement-images img {
+    width: 100%;
+    max-width: 600px;
+    height: auto;
+    border-radius: 5px;
+}
+
+/* Animação de fade-in */
+.fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.fade-in.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Estilo de fundo gradiente */
+.values-section {
+    background: linear-gradient(135deg, #102151 30%, #1e2a47 100%);
+    padding: 3em;
+    color: #ffffff;
+}
+
+/* Estilo para a seção de depoimentos */
+.testimonials-section {
+    background-color: #4a90e2;
+    padding: 3em 1em;
+    text-align: center;
+}
+
+.testimonial {
+    margin: 1em auto;
+    max-width: 600px;
+    padding: 1em;
+    background: #45d547;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
